@@ -10,6 +10,7 @@ import Compare from './pages/Compare';
 import InnovX from './pages/InnovX';
 import Hiring from './pages/Hiring';
 import Analytics from './pages/Analytics';
+import FutureSimulation from './pages/FutureSimulation';
 
 function App() {
   const location = useLocation();
@@ -49,6 +50,7 @@ function App() {
           <Link to="/hiring" className={`nav-link ${location.pathname.startsWith('/hiring') ? 'active' : ''}`}>Hiring</Link>
           <Link to="/compare" className={`nav-link ${location.pathname.startsWith('/compare') ? 'active' : ''}`}>Compare</Link>
           <Link to="/analytics" className={`nav-link ${location.pathname.startsWith('/analytics') ? 'active' : ''}`}>Analytics</Link>
+          <Link to="/simulation" className={`nav-link ${location.pathname.startsWith('/simulation') ? 'active' : ''}`}>Simulation</Link>
         </div>
       </nav>
 
@@ -61,6 +63,7 @@ function App() {
           <Route path="/hiring" element={<Hiring />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/simulation" element={<FutureSimulation />} />
         </Routes>
       </main>
     </div>
