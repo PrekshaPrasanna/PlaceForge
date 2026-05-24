@@ -22,7 +22,7 @@ export function useCompanies(category?: string, searchQuery?: string) {
         // Adding company_id instead of id. We alias id so UI doesn't break if it expects id, 
         // wait the UI uses company.id? I must update UI to use company_id if I follow "no renaming"
         // I will just use company_id and update UI where needed.
-        const listingColumns = 'company_id, name, short_name, category, employee_size, focus_sectors, hiring_velocity, profitability_status, remote_policy_details, logo_url, tech_stack, brand_value, ai_ml_adoption_level, automation_level, skill_relevance, overview_text, website_url, linkedin_url, twitter_handle';
+        const listingColumns = '*';
 
         if (searchQuery) {
           data = await companyService.searchCompanies(searchQuery, listingColumns);

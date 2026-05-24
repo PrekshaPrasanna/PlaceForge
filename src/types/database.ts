@@ -6,6 +6,8 @@ export interface Company {
   employee_size: string | null;
   focus_sectors: string | string[]; // Can be string in DB
   hiring_velocity: string | null;
+  employee_turnover: string | null;
+  avg_retention_tenure: string | null;
   profitability_status: string | null;
   remote_policy_details: string | null;
   logo_url: string;

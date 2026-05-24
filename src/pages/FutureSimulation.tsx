@@ -317,8 +317,13 @@ export default function FutureSimulation() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', background: 'rgba(0,0,0,0.3)', padding: '1.5rem', borderRadius: '24px', border: '1px solid var(--glass-border)' }}>
               <div>
                 <h2 style={{ margin: 0, fontSize: '1.8rem' }}>Simulation Results</h2>
-                <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem', alignItems: 'center' }}>
                   <span className="badge badge-primary">{primaryResult.scenario}</span>
+                  {primaryResult.isRealData ? (
+                    <span className="badge" style={{ background: 'linear-gradient(45deg, #4285F4, #9b72cb, #d96570)', color: 'white', border: 'none' }}>✨ Powered by Gemini AI</span>
+                  ) : (
+                    <span className="badge" style={{ background: 'var(--glass-bg)', color: 'var(--color-text-muted)', border: '1px solid var(--glass-border)' }}>⚙️ Rule-based Simulation</span>
+                  )}
                   {compareResult && <span className="badge badge-accent">VS {compareResult.scenario}</span>}
                 </div>
               </div>

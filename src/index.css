@@ -98,8 +98,8 @@ a { text-decoration: none; color: inherit; }
 /* Floating Pill Navbar */
 .navbar {
   margin: 2rem auto;
-  width: 90%;
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1200px;
   background: rgba(10, 20, 25, 0.5);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -136,7 +136,18 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 0 12px var(--color-accent-2);
 }
 
-.navbar-nav { display: flex; gap: 0.5rem; }
+.navbar-nav { 
+  display: flex; 
+  gap: 0.5rem; 
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.navbar-nav::-webkit-scrollbar {
+  display: none;
+}
 
 .nav-link {
   padding: 0.5rem 1.25rem;

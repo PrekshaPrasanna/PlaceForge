@@ -11,6 +11,9 @@ import InnovX from './pages/InnovX';
 import Hiring from './pages/Hiring';
 import Analytics from './pages/Analytics';
 import FutureSimulation from './pages/FutureSimulation';
+import SwapSkill from './pages/SwapSkill';
+import SkillDetails from './pages/SkillDetails';
+import CultureFit from './pages/CultureFit';
 
 function App() {
   const location = useLocation();
@@ -51,6 +54,8 @@ function App() {
           <Link to="/compare" className={`nav-link ${location.pathname.startsWith('/compare') ? 'active' : ''}`}>Compare</Link>
           <Link to="/analytics" className={`nav-link ${location.pathname.startsWith('/analytics') ? 'active' : ''}`}>Analytics</Link>
           <Link to="/simulation" className={`nav-link ${location.pathname.startsWith('/simulation') ? 'active' : ''}`}>Simulation</Link>
+          <Link to="/swap-skill" className={`nav-link ${location.pathname.startsWith('/swap-skill') ? 'active' : ''}`}>Skill Swap</Link>
+          <Link to="/culture-fit" className={`nav-link ${location.pathname.startsWith('/culture-fit') ? 'active' : ''}`}>Cultural Fit</Link>
         </div>
       </nav>
 
@@ -64,6 +69,9 @@ function App() {
           <Route path="/compare" element={<Compare />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/simulation" element={<FutureSimulation />} />
+          <Route path="/swap-skill" element={<SwapSkill />} />
+          <Route path="/swap-skill/skill/:id" element={<SkillDetails />} />
+          <Route path="/culture-fit" element={<CultureFit />} />
         </Routes>
       </main>
     </div>
